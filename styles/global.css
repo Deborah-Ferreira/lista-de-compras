@@ -21,6 +21,7 @@
   --link: .87rem;
 } 
 body {
+  background-color: var(--background-primary);
   font-family: "Inter", serif;
   color: var(--content-tertiary);
   font-size: var(--paragraph);

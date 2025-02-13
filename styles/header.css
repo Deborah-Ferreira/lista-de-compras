@@ -1,0 +1,38 @@
+& .status-bar { 
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 1.25rem 0 2rem;
+  & .time-light { 
+    background: url(../assets/icons/9-41.svg) no-repeat center;
+    padding-inline: .93rem; 
+  }
+  & .status {  
+    display: flex;
+    flex-direction: row;  
+    gap: .25rem; 
+    & .signal { 
+      background: url(../assets/icons/network-signal.svg) no-repeat center/1.25rem;
+      padding: .62rem;  
+    }
+    & .wifi-signal { 
+      background: url(../assets/icons/wifi-signal.svg) no-repeat center/1.25rem;
+      padding: .62rem;  
+    }
+    & .battery { 
+      background: url(../assets/icons/battery.svg) no-repeat center/1.56rem;
+      padding-right: 1.56rem;   
+    }
+  }
+}
+@media (width >= 80rem) {
+  & .logo { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.56rem;
+  }
+  & .status-bar { 
+    display: none; 
+  }
+}
