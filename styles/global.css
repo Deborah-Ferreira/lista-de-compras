@@ -21,26 +21,26 @@
   --link: .87rem;
 } 
 body {
-  background-color: var(--background-primary);
+  background-color: var(--background-primary); 
   font-family: "Inter", serif;
   color: var(--content-tertiary);
   font-size: var(--paragraph);
   line-height: 140%;
-  font-weight: 400;
-} 
+  font-weight: 400; 
+}   
 h1 {
   color: var(--content-primary);
   font-size: var(--title);
   line-height: 2rem;
   font-weight: 700;
 }   
-p {
+label {
   color: var(--content-secondary);
   font-size: var(--paragraph);
   line-height: 1.25rem;
   font-weight: 500;
 }
-label {
+p {
   color: var(--always-white); 
   font-size: var(--label);
   line-height: 1.25rem;
@@ -52,4 +52,4 @@ a {
   font-size: var(--link); 
   line-height: 1rem;
   font-weight: 500;
-}   
+}  
