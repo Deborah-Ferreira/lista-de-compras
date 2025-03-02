@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de compras</title>
   <link rel="stylesheet" href="styles/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body>  
-    <header>
-      <div class="logo mobile-none">
-        <img src="./assets/logo.svg" alt="Logo">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+</head> 
+<body>
+  <header>
+    <div class="logo mobile-none">
+      <img src="./assets/logo.svg" alt="Logo">
+    </div>
+    <div class="status-bar">
+      <div class="time-light"></div>
+      <div class="status">
+        <div class="signal"></div>
+        <div class="wifi-signal"></div>
+        <div class="battery"></div>
       </div>
-      <div class="status-bar">
-        <div class="time-light"></div> 
-        <div class="status">
-          <div class="signal"></div>
-          <div class="wifi-signal"></div>
-          <div class="battery"></div> 
-        </div>
+    </div>
+  </header>
+  <main>
+    <section class="addItem">
+      <a href="#">Voltar</a>
+      <h1>Compras da semana</h1>
+      <div class="wrapper">
+        <input type="text" name="newItemText" id="newItemText" placeholder="Adicione um novo item">
+        <button type="submit" onclick="addItem()">Adicionar item</button>
       </div>
-    </header>  
-    <main>
-      <section class="addItem">
-        <a href="#">Voltar</a>
-        <h1>Compras da semana</h1> 
-        <div class="wrapper">
-          <input type="text" placeholder="Adicione um novo item"> 
-          <button type="submit">Adicionar item</button> 
-        </div>  
-      </section>
-      <section class="list">   
-        <div class="input-wrapper">
-          <input type="checkbox" name="bread">
-          <div class="input-checkbox"></div>
-          <label for="bread">Pão de forma</label>
-          <div class="delete"></div>
-        </div>
-        <div class="input-wrapper">
-          <input type="checkbox" name="coffee">
-          <div class="input-checkbox"></div>
-          <label for="coffee">Café preto</label>
-          <div class="delete"></div>
-        </div>
-        <div class="input-wrapper">
-          <input type="checkbox" name="juice">
-          <div class="input-checkbox"></div>
-          <label for="juice">Suco de laranja</label>
-          <div class="delete"></div>
-        </div>
-        <div class="input-wrapper">
-          <input type="checkbox" name="cookie">
-          <div class="input-checkbox"></div>
-          <label for="cookie">Bolacha</label>
-          <div class="delete"></div>
-        </div>  
-      </section> 
-      <div class="alert">
-        <div class="warning-circle"></div>
-        <p>O item foi removido da lista</p>
-        <div class="delete-small"></div>
+    </section>
+    <section class="list">
+      <div class="input-wrapper">
+        <input type="checkbox" name="bread">
+        <div class="input-checkbox"></div>
+        <label for="bread">Pão de forma</label>
+        <span class="lixeira" onclick="removeItem(event)"></span>
       </div>
-    </main> 
+      <div class="input-wrapper">
+        <input type="checkbox" name="coffee">
+        <div class="input-checkbox"></div>
+        <label for="coffee">Café preto</label>
+        <span class="lixeira" onclick="removeItem(event)"></span>
+      </div>
+      <div class="input-wrapper">
+        <input type="checkbox" name="juice">
+        <div class="input-checkbox"></div>
+        <label for="juice">Suco de laranja</label>
+        <span class="lixeira" onclick="removeItem(event)"></span>
+      </div>
+      <div class="input-wrapper">
+        <input type="checkbox" name="cookie">
+        <div class="input-checkbox"></div>
+        <label for="cookie">Bolacha</label>
+        <span class="lixeira" onclick="removeItem(event)"></span>
+      </div>
+    </section>
+    <footer class="alert hide">
+      <div class="warning-circle"></div>
+      <p>O item foi removido da lista</p>
+      <div class="delete-small" onclick="deleteAlert()"></div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
 </body>
+
 </html>
